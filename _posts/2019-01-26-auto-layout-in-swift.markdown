@@ -44,7 +44,7 @@ I believe there is no hard and fast rule for this, but as a general intuition, y
 
 ### Shortcut: UIView extension
 
-You might be thinking now that if a simple red square requires 4 lines of code already, what more for huge and large scale apps? Yes, the code can get long and messy pretty quickly, and thus I like to include this `UIView` extension function to allow me to anchor my views easy with just one method! Credits to (LetsBuildThatApp)[https://www.youtube.com/channel/UCuP2vJ6kRutQBfRmdcI92mA] for introducing this idea in his many iOS tutorials, and I have adapted his solution to suit my preference as much as possible. Note that not all 12 possible constraint types are included in this method, but you can easily add them wherever required!
+You might be thinking now that if a simple red square requires 4 lines of code already, what more for huge and large scale apps? Yes, the code can get long and messy pretty quickly, and thus I like to include this `UIView` extension function to allow me to anchor my views easy with just one method! Credits to <a href="https://www.youtube.com/channel/UCuP2vJ6kRutQBfRmdcI92mA" target="_blank">LetsBuildThatApp</a> for introducing this idea in his many iOS tutorials, and I have adapted his solution to suit my preference as much as possible. Note that not all 12 possible constraint types are included in this method, but you can easily add them wherever required!
 
 ```swift
 import UIKit
