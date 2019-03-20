@@ -19,7 +19,7 @@ Often times, we'll be using a two-tier caching mechanism, where we cache images/
 
 In this post, I'll introduce some ways we can implement an image caching system in your iOS app.
 
-### `NSCache`
+### NSCache
 
 `NSCache` holds the image in memory and is mostly used for optimal performace in terms of speed. Usage of `NSCache`, however, takes up memory (RAM) and that can result in the application throwing back memory warnings at you, but not worry as Apple's `NSCache` implementation will take care of this on its own:
 
@@ -60,7 +60,7 @@ extension UIImageView {
 }
 ```
 
-### `NSURLCache`
+### NSURLCache
 
 Apple also provides a cache called `NSURLCache` that does all the caching required internally for you and there is no need for you to manually manage the caching of data. Internally, `NSURLCache` uses both in-memory and on-disk image caching, and it makes its decisions based on the size of the data. All you need to do is to initialise this cache and to set it as a default for your application, and then use `NSURLSession` to download your images/data.
 
