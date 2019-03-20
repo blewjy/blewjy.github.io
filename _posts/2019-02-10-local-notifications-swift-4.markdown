@@ -17,7 +17,7 @@ The thing about notifications in iOS is that for developers to access the Apple 
 
 To start off, you should ask for permission from the user to show him/her notifications from your app.
 
-'''swift
+```swift
 import UserNotifications
 
 let options: UNAuthorizationOptions = [.alert, .sound, .badge] // You can customise this
@@ -28,7 +28,7 @@ UNUserNotificationCenter.current().requestAuthorization(options: options) {
       print("Error: \(error)")
     }
 }
-'''
+```
 
 This step should be done as early as possible in the app lifecycle - a good place to make this authorisation request is in `AppDelegate`'s `didFinishLaunchingWithOptions` function.
 
@@ -36,11 +36,11 @@ This step should be done as early as possible in the app lifecycle - a good plac
 
 After requesting for permission from the user to schedule notifications, you should create a local notification request, which is of type `UNNotificationRequest`. To initialise a `UNNotificationRequest`, you'll need the following:
 
-#### `UNNotificationIdentifier`
+#### UNNotificationIdentifier
 
 This is just your usual string identifiers.
 
-#### `UNNotificationContent`
+#### UNNotificationContent
 
 This is the content that the user will see when the notification pops up on their screen.
 
@@ -51,7 +51,7 @@ content.body = "Notification Body"
 content.sound = UNNotificationSound.default()
 ```
 
-#### `UNNotifcationTrigger`
+#### UNNotifcationTrigger
 
 This is the trigger that defines when the notification will be shown to the user. It can be customised either based on a set amount of time, the device's calendar, or by the device's geolocation.
 
@@ -70,7 +70,7 @@ let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeat
 let trigger = UNLocationNotificationTrigger(triggerWithRegion: region, repeats: false)
 ```
 
-#### `UNNotificationRequest`
+#### UNNotificationRequest
 
 Finally, we are ready to put out the request to the notification system.
 
